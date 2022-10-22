@@ -11,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.zerock.guestbook.entity.Guestbook;
 import org.zerock.guestbook.entity.QGuestbook;
+import org.zerock.guestbook.entity.repository.GuestbookRepository;
 
 import java.util.Optional;
 import java.util.stream.IntStream;

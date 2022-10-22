@@ -8,11 +8,8 @@ import org.zerock.guestbook.entity.Guestbook;
 public interface GuestbookService {
 
     Long register(GuestbookDTO dto);
-
     PageResultDTO<GuestbookDTO, Guestbook> getList(PageRequestDTO requestDTO);
-
     GuestbookDTO read(Long gno);
-
     void modify(GuestbookDTO dto);
 
     void remove(Long gno);

@@ -2,9 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
-
     <th:block th:fragment="content">
-
         <h1 class="mt-4">방명록
             <span>
                 <a th:href="@{/guestbook/register}">
@@ -13,7 +11,6 @@
                 </a>
             </span>
         </h1>
-
 
         <form action="/guestbook/list" method="get" id="searchForm">
             <div class="input-group">
@@ -64,7 +61,6 @@
         </table>
 
         <ul class="pagination h-100 justify-content-center align-items-center">
-
             <li class="page-item " th:if="${result.prev}">
                 <a class="page-link" th:href="@{/guestbook/list(page= ${result.start -1},
                     type=${pageRequestDTO.type} ,
@@ -106,18 +102,19 @@
         </div>
 
         <script th:inline="javascript">
-
             var msg = [[${msg}]];
             console.log(msg);
+
             if (msg) {
                 $(".modal").modal();
             }
+
             var searchForm = $("#searchForm");
 
             $('.btn-search').click(function (e) {
-
                 searchForm.submit();
             });
+
             $('.btn-clear').click(function (e) {
                 searchForm.empty().submit();
             });
